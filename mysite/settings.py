@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'djangogirls',
         'USER': 'bogdan',
-        'PASSWORD': '1488',
+        'PASSWORD': '', #yourpassword here
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -123,8 +123,13 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 STATICFILES_DIRS = (os.path.join('static'),)
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 LOGIN_REDIRECT_URL = 'post_list'
+=======
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+LOGIN_REDIRECT_URL = '/'
+>>>>>>> e40fd68ec7f4cf78265fe753649b1262b2864639
